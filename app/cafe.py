@@ -1,10 +1,11 @@
 import datetime
 from typing import Dict, Any
-from .errors import NotVaccinatedError, OutdatedVaccineError, NotWearingMaskError
+from app.errors import NotVaccinatedError, OutdatedVaccineError, NotWearingMaskError
 
 
 class Cafe:
     """Represents a cafe with a name."""
+
     def __init__(self, name: str) -> None:
         """
         Initializes a Cafe object.
