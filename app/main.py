@@ -1,7 +1,7 @@
 import datetime
 from typing import List, Dict, Any
-from app.cafe import Cafe
-from app.errors import VaccineError, NotWearingMaskError, NotVaccinatedError
+from .cafe import Cafe
+from .errors import VaccineError, NotWearingMaskError, NotVaccinatedError
 
 
 def go_to_cafe(friends: List[Dict[str, Any]], cafe: Cafe) -> str:
