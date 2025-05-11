@@ -10,8 +10,9 @@ def go_to_cafe(friends: List[Dict[str, Any]], cafe: Cafe) -> str:
     indicating whether they are allowed or what the issues are.
 
     Args:
-        friends: A list of dictionaries, where each dictionary represents a friend
-            and contains information like name, vaccine, and wearing_a_mask.
+        friends: A list of dictionaries, where each dictionary represents
+        a friend and contains information like name,
+        vaccine, and wearing_a_mask.
         cafe: The Cafe object the friends want to visit.
 
     Returns:

@@ -1,6 +1,7 @@
 import datetime
 from typing import Dict, Any
-from app.errors import NotVaccinatedError, OutdatedVaccineError, NotWearingMaskError
+from app.errors import (NotVaccinatedError,
+                        OutdatedVaccineError, NotWearingMaskError)
 
 
 class Cafe:
@@ -36,7 +37,8 @@ class Cafe:
             raise NotVaccinatedError(visitor_name)
 
         expiration_date = visitor["vaccine"].get("expiration_date")
-        if not isinstance(expiration_date, datetime.date):
+        if not isinstance(expiration_date,
+                          datetime.date):
             raise ValueError("Vaccine expiration_date must be a datetime.date object.")
         if expiration_date < datetime.date.today():
             raise OutdatedVaccineError(visitor_name, expiration_date)
