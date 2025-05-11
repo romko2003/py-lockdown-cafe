@@ -39,7 +39,8 @@ class Cafe:
         expiration_date = visitor["vaccine"].get("expiration_date")
         if not isinstance(expiration_date,
                           datetime.date):
-            raise ValueError("Vaccine expiration_date must be a datetime.date object.")
+            raise ValueError("Vaccine expiration_date "
+                             "must be a datetime.date object.")
         if expiration_date < datetime.date.today():
             raise OutdatedVaccineError(visitor_name, expiration_date)
 
